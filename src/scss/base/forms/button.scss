@@ -1,0 +1,87 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 12px 12px;
+	background-color: var(--btn-color);
+	border-radius: 4px;
+
+	font-family: Play;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px; /* 142.857% */
+	text-transform: uppercase;
+
+	transition: all 0.3s ease 0s;
+	position: relative;
+
+	@media (min-width:$mobile){
+		max-width: 148px; 
+	}
+
+	&::before,
+	&::after,
+	& span::before,
+	& span::after {
+		content: "";
+		width: 9px;
+		height: 9px;
+		background-image: url("@img/decor/corner.svg");
+		position: absolute;
+	}
+
+	&::before {
+		top: 0;
+		left: 0;
+	}
+	
+	&::after {
+		top: 0;
+		right: 0;
+		transform: rotate(90deg);
+	}
+	& span::before {
+		bottom: 0;
+		right: 0;
+		transform: rotate(180deg);
+	}
+	& span::after {
+		bottom: 0;
+		left: 0;
+		transform: rotate(270deg);
+	}
+
+	//button_opacity
+	&_opacity {
+		color: #FFFBFB;
+		background-color: rgba(82, 255, 141, 0.10);
+
+	}
+
+
+
+
+	&_fw {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--main-color-text);
+			background-color: var(--btn-color-hover);
+
+		}
+	}
+
+	&:active {
+		color: var(--main-color-text);
+		background-color: var(--btn-color-active);
+
+	}
+
+
+}

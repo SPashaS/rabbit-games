@@ -1,0 +1,346 @@
+// Заголовки, общие БЄМ блоки и проче...
+.parallax {
+  @media (min-width:$tablet){
+    position: absolute;
+    background-color: #000;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("@img/bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+    filter: blur(5.5px);
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+h2 {
+  font-family: SpaceGrotesk;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: normal;
+
+  @media (min-width:$tablet){
+    font-size: 4rem;
+  }
+
+}
+
+.title {
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
+
+  
+
+  &_mb {
+    margin-bottom: 32px;
+
+    @media (min-width:$tablet){
+      margin-bottom: 54px;
+    }
+  }
+}
+
+a[class*="_icon-"] {
+  font-size: 24px;
+  color: var(--btn-color);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--btn-color-hover);
+    }
+  }
+  &:active {
+    color: var(--link-color-active);
+  }
+}
+
+.text {
+  p {
+
+  }
+}
+
+.block {
+  border-radius: 12px;
+  border: 1px solid #006369;
+  background: linear-gradient(146deg, rgba(33, 37, 43, 0.34) 20.33%, rgba(16, 17, 14, 0.38) 96.38%);
+  backdrop-filter: blur(2.5px);
+  padding: 24px 36px 24px 24px;
+
+  @media (min-width:$tablet){
+    padding: 24px 46px 24px 24px;
+  }
+
+
+  &::before {
+    content:'';
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  // .block_grad
+  &_grad {
+    border: 1px solid #164F29;
+    background: linear-gradient(208deg, #1D2728 2.63%, #223E34 102.16%);
+    padding: 20px 24px;
+
+    @media (min-width:$tablet){
+      padding: 32px;
+    }
+  }
+
+  // .block_big
+  &_big {
+
+    @media (min-width:$tablet){
+      border-radius: 20px;
+      border: 1px solid #0D923A;
+      background: linear-gradient(115deg, #192121 0%, #223C33 108.12%);
+
+      padding: 60px;
+
+
+      &::before {
+        top: 60px;
+        right: 60px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+
+
+
+  // .block__title
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 32px; /* 160% */
+    margin-bottom: 12px;
+
+    @media (min-width:$tablet){
+      font-size: 2.4rem; 
+    }
+  }
+
+  // .block__text
+  &__text {
+    color: #999A99;
+  }
+}
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // .icon_xbox
+  &_xbox {
+    background-image: url("@img/blocks/platforms/xbox.png");
+    width: 70px;
+    height: 16.6px;
+
+    @media (min-width:$tablet){
+      width: 143px;
+      height: 34px;
+    }
+  }
+
+  // .icon_steam
+
+  &_steam {
+    background-image: url("@img/blocks/platforms/steam.png");
+    width: 94px;
+    height: 26.338px;
+
+    @media (min-width:$tablet){
+      width: 207px;
+      height: 58px;
+    }
+  }
+
+  // .icon_arcade
+  &_arcade {
+    background-image: url("@img/blocks/platforms/arcade.png");
+    width: 92px;
+    height: 17.989px;
+
+    @media (min-width:$tablet){
+      width: 179px;
+      height: 35px;
+    }
+  }
+
+  // .icon_steam-deck
+  &_steam-deck {
+    background-image: url("@img/blocks/platforms/steam-deck.png");
+    width: 124.133px;
+    height: 35px;
+
+    @media (min-width:$tablet){
+      width: 266px;
+      height: 75px;
+    }
+  }
+
+  // .icon_ios
+
+  &_ios {
+    background-image: url("@img/blocks/platforms/ios.png");
+    width: 47.133px;
+    height: 28.933px;
+
+    @media (min-width:$tablet){
+      width: 101px;
+      height: 62px;
+    }
+  }
+
+  // .icon_vr
+
+  &_vr {
+    background-image: url("@img/blocks/platforms/vr.png");
+    width: 63.732px;
+    height: 15.746px;
+
+    @media (min-width:$tablet){
+      width: 170px;
+      height: 42px;
+    }
+  }
+
+  // .icon_nintendo
+
+  &_nintendo {
+    background-image: url("@img/blocks/platforms/nintendo.png");
+    width: 96px;
+    height: 20.8px;
+
+    @media (min-width:$tablet){
+      width: 180px;
+      height: 39px;
+    }
+  }
+
+  // .icon_pc
+
+  &_pc {
+    background-image: url("@img/blocks/platforms/pc.png");
+    width: 22.167px;
+    height: 19px;
+
+    @media (min-width:$tablet){
+      width: 70px;
+      height: 60px;
+    }
+  }
+
+  // .icon_android
+
+  &_android {
+    background-image: url("@img/blocks/platforms/android.png");
+    width: 74px;
+    height: 16.536px;
+
+    @media (min-width:$tablet){
+      width: 179px;
+      height: 40px;
+    }
+  }
+
+  // .icon_ps
+
+  &_ps {
+    background-image: url("@img/blocks/platforms/ps.png");
+    width: 61px;
+    height: 17.582px;
+
+    @media (min-width:$tablet){
+      width: 170px;
+      height: 49px;
+    }
+  }
+}
+
+// .blur {
+//   position: relative;
+//   z-index: 2;
+
+//   &::after {
+//     content:'';
+//     position: absolute;
+//     z-index: -2;
+//     top: -44px;
+//     right: -110px;
+//     bottom: -44px;
+//     left: -110px;
+//     background: #181D1E;
+//     filter: blur(55.5px);
+//   }
+// }
+
+[class*="__blur"]{
+  @media (min-width:$tablet){
+    position: absolute;
+    z-index: 1;
+    top: -44px;
+    right: -110px;
+    bottom: -44px;
+    left: -110px;
+    background: #181D1E;
+    filter: blur(55.5px);
+  }
+}
+
+[class*="__wrapper-blur"]{
+  @media (min-width:$tablet){
+    position: relative;
+    z-index: 3;
+  }
+}
+
+
+
+
+.block-round-colored {
+  .block {
+    &:nth-child(8n+1),
+    &:nth-child(8n+7) { 
+      &::before {
+        background-color: #81FF00;  
+      }
+    }
+    &:nth-child(8n+3),
+    &:nth-child(8n+6) {
+      &::before {
+        background-color: #00A8EA;  
+      }
+    }
+
+    &:nth-child(8n+4),
+    &:nth-child(8n+5) {
+      &::before {
+        background-color: #A8000C;  
+      }
+    }
+  }
+}

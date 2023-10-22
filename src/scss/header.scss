@@ -1,0 +1,335 @@
+//====================================================================================================
+.header {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 16px 0;
+
+  &::after {
+    content:'';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(84, 85, 85, 0.04);
+		backdrop-filter: blur(11px);
+  }
+
+	// .header__container
+	&__container {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr;
+
+		@media (min-width:$tablet){
+			grid-template-columns: 1fr 148px; 
+		}
+	}
+
+	// .header__main
+	&__main {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .header__logo
+	&__logo {
+		flex: 1 1 auto;
+	}
+
+	// .header__right-block
+
+	&__right-block {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		@media (min-width:$mobile){
+			gap: 40px; 
+		}
+	}
+
+	// .header__languages
+	&__languages {
+	}
+	
+	// .header__burger
+	&__burger {
+	}
+
+	// .header__menu
+	&__menu {}
+
+	// .header__button
+	&__button {}
+}
+
+.logo {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 5.5px;
+
+	// .logo__image
+	&__image {
+		background-size: cover;
+		background-image: url("@img/logo.png");
+	}
+
+	// .logo__text
+	&__text {
+		font-family: SpaceGrotesk;
+		text-transform: uppercase;
+		text-align: center;
+		display: grid;
+	}
+
+	// .logo__rabbit
+	&__rabbit {
+		color: var(--main-color);
+		font-size: 18.732px;
+		font-weight: 700;
+
+		@media (min-width:$tablet){
+			font-size: 2.4rem;
+		}
+	}
+
+	// .logo__games
+	&__games {
+		font-size: 9.366px;
+		font-weight: 400;
+		line-height: 7.805px; /* 83.333% */
+
+		@media (min-width:$tablet){
+			font-size: 12px;
+			line-height: 10px; /* 83.333% */ 
+		}
+	}
+
+
+
+	// .logo_header
+	&_header {
+
+		.logo__image {
+
+			width: 30.398px;
+			height: 31.411px;
+
+			@media (min-width:$tablet){
+				width: 38.947px;
+				height: 40.246px;
+			}
+		}
+
+	}
+
+// .logo_footer
+	&_footer {
+		flex-direction: column;
+
+		.logo__image {
+			width: 38.947px;
+			height: 40.246px;
+		}
+
+		.logo__rabbit {
+			color: var(--main-color-text);
+			font-size: 2.4rem;
+		}
+
+		.logo__games {
+			font-size: 1.2rem;
+		}
+
+		@media (min-width:$tablet){
+
+			.logo__image {
+				background-image: url("@img/logo-green.png");
+				width: 58.421px;
+				height: 60.368px;
+			}
+
+			.logo__text {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			
+			.logo__games {
+				font-size: 2.4rem;
+				font-weight: 400;
+				line-height: normal;
+				text-transform: uppercase;
+			} 
+		}
+
+
+	}
+
+
+}
+
+.menu {
+
+	// .menu__body
+	&__body {
+		@media (max-width:$mobile){
+			display: none;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: #000000d8;
+			padding: 20px;
+
+			
+			.menu-open & {
+				display: flex;
+				align-items: center;
+    		justify-content: center;
+				z-index: 10;
+				padding: 40% 16px;
+			}
+		}
+
+
+	}
+
+	// .menu__list
+	&__list {
+		text-align: center;
+		@media (min-width:$mobile){
+			display: flex; 
+			gap: 40px;
+			text-align: left;
+		}
+	}
+
+	// .menu__item
+	&__item {}
+
+	// .menu__link
+	&__link {
+		font-size: 3rem;
+		font-weight: 400;
+		line-height: 2;
+		text-transform: uppercase;
+
+		@media (min-width:$mobile){
+			font-size: 1.4rem;
+			font-weight: 600;
+			line-height: 1.42857;
+		}
+	}
+}
+
+
+.languages {
+	display: inline-flex;
+	gap: 28px;
+	color: var(--color-text);
+	position: relative;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px; /* 142.857% */
+	text-transform: uppercase;
+
+	&::before {
+		content:'';
+		height: 100%;
+		width: 1px;
+		background-color: var(--color-text);
+		position: absolute;
+		left: 50%;
+		top: 0;
+	}
+
+	// .languages__item
+	&__item {
+
+		// .languages__item_active
+		&_active {
+			color: var(--main-color);
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
+//Burger
+.icon-burger  {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		padding: 6px 3px;
+		cursor: pointer;
+		z-index: 15;
+
+		&__lines {
+			display: block;
+			height: 100%;
+			position: relative;
+
+			span,
+			&::before,
+			&::after {
+				content: "";
+				transition: all 0.3s ease 0s;
+				left: 0px;
+				right: 0px;
+				position: absolute;
+				height: 2px;
+				background-color: #fff;
+			}
+
+			&::before {
+				top: 0px;
+			}
+
+			&::after {
+				bottom: 0px;
+			}
+
+			span {
+				top: calc(50% - 1px);
+			}
+
+			.menu-open & {
+				span {
+					transform: scale(0);
+				}
+				&::before {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&::after {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+
+		}
+		
+	}
+
+}
+
