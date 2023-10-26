@@ -17,6 +17,8 @@
 
 	transition: all 0.3s ease 0s;
 	position: relative;
+	-webkit-appearance: none;
+  -webkit-border-radius: 0;
 
 	@media (min-width:$mobile){
 		max-width: 148px; 

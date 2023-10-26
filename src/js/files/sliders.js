@@ -7,7 +7,8 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper from 'swiper';
+import {Autoplay} from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -45,25 +46,26 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.swiper')) {
+	if (document.querySelector('.partners__swiper')) {
 		new Swiper('.swiper', {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			//modules: [Navigation, Pagination],
-			/*
-			effect: 'fade',
+			modules: [Autoplay],
+	
+			// effect: 'fade',
 			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+	
+			// observer: true,
+			// observeParents: true,
+			slidesPerView: "auto",
+			// spaceBetween: 0,
+			// autoHeight: true,
 			speed: 800,
-			//touchRatio: 0,
+			touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
 			//preloadImages: false,
@@ -74,31 +76,28 @@ function initSliders() {
 			//	clickable: true,
 			//},
 			// Arrows
-			navigation: {
-				nextEl: '.about__more .more__item_next',
-				prevEl: '.about__more .more__item_prev',
-			},
-			/*
+			// navigation: {
+			// 	nextEl: '.about__more .more__item_next',
+			// 	prevEl: '.about__more .more__item_prev',
+			// },
 			breakpoints: {
+				0: {
+					slidesPerView: "auto",
+					spaceBetween: 28,
+				},
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					slidesPerView: "auto",
+					spaceBetween: 28,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 0,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
 				},
 			},
-			*/
+
 			on: {
 
 			}

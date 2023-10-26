@@ -37,9 +37,15 @@ h2 {
 
 .title {
   text-align: center;
+
   span {
     text-transform: uppercase;
     color: var(--main-color);
+    display: block;
+
+    @media (min-width:$tablet){
+      display: inline;
+    }
   }
 
   
@@ -75,6 +81,7 @@ a[class*="_icon-"] {
 
 .block {
   border-radius: 12px;
+  position: relative;
   border: 1px solid #006369;
   background: linear-gradient(146deg, rgba(33, 37, 43, 0.34) 20.33%, rgba(16, 17, 14, 0.38) 96.38%);
   backdrop-filter: blur(2.5px);
@@ -138,14 +145,62 @@ a[class*="_icon-"] {
     margin-bottom: 12px;
 
     @media (min-width:$tablet){
-      font-size: 2.4rem; 
+      font-size: 2.4rem;
+      span {
+        display: block;
+      }
     }
   }
 
   // .block__text
   &__text {
     color: #999A99;
+    line-height: 1.42857;
+    // display: -webkit-box;
+    // overflow: hidden;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 3;
   }
+
+  //block__more
+  &__more {
+    margin-top: 18px;
+    color: var(--main-color);
+    font-family: Play;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.42857;
+    text-transform: uppercase;
+    position: relative;
+    
+    &::after {
+      content: ''; 
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      background-image: url("@img/icons/arrow-bm.svg");
+      width: 8px;
+      height: 4px;
+      transform: translateY(-50%);
+    }
+
+    & span:last-child {
+      display: none;
+    }
+
+    ._showmore-active & span:first-child {
+      display: none;
+    } 
+
+    ._showmore-active & span:last-child  {
+      display: block;
+    } 
+
+    ._showmore-active &::after {
+      transform: translateY(-50%) rotate(180deg);
+    } 
+  }
+
 }
 
 .icon {
@@ -281,23 +336,6 @@ a[class*="_icon-"] {
   }
 }
 
-// .blur {
-//   position: relative;
-//   z-index: 2;
-
-//   &::after {
-//     content:'';
-//     position: absolute;
-//     z-index: -2;
-//     top: -44px;
-//     right: -110px;
-//     bottom: -44px;
-//     left: -110px;
-//     background: #181D1E;
-//     filter: blur(55.5px);
-//   }
-// }
-
 [class*="__blur"]{
   @media (min-width:$tablet){
     position: absolute;
@@ -317,9 +355,6 @@ a[class*="_icon-"] {
     z-index: 3;
   }
 }
-
-
-
 
 .block-round-colored {
   .block {
