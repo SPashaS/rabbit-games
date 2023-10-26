@@ -3649,23 +3649,26 @@
     }
   })({});
   let oe = !1;
-  setTimeout(() => {
-    if (oe) {
-      let e = new Event("windowScroll");
-      window.addEventListener("scroll", function (t) {
-        document.dispatchEvent(e);
-      });
-    }
-  }, 0);
-  const le = document.querySelector(".parallax"),
-    de = document.querySelector(".promo");
-  window.addEventListener("scroll", () => {
-    let e = window.scrollY;
-    console.log(e),
-      (le.style.backgroundPosition = `0 -${0.5 * e}px`),
-      (de.style.top = `-${0.2 * e}px`);
-  }),
-    (window.FLS = !0),
+  if (
+    (setTimeout(() => {
+      if (oe) {
+        let e = new Event("windowScroll");
+        window.addEventListener("scroll", function (t) {
+          document.dispatchEvent(e);
+        });
+      }
+    }, 0),
+    window.matchMedia("(min-width: 991.98px)").matches)
+  ) {
+    const e = document.querySelector(".parallax"),
+      t = document.querySelector(".promo");
+    window.addEventListener("scroll", () => {
+      let s = window.scrollY;
+      (e.style.backgroundPosition = `0 -${0.5 * s}px`),
+        (t.style.top = `-${0.2 * s}px`);
+    });
+  }
+  (window.FLS = !0),
     (function () {
       let e = document.querySelector(".icon-burger");
       e &&
