@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231227155519">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,16 +31,19 @@
 						<div class="header__menu menu">
 							<nav class="menu__body">
 								<ul class="menu__list">
-									<li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-									<li class="menu__item"><a href="#" class="menu__link">Our projects</a></li>
-									<li class="menu__item"><a href="#" class="menu__link">Join us</a></li>
-									<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+									<li class="menu-item"><a href="#">About us</a></li>
+									<li class="menu-item"><a href="#">Our projects</a></li>
+									<li class="menu-item"><a href="#">Join us</a></li>
+									<li class="menu-item"><a href="#">Contacts</a></li>
 								</ul>
 							</nav>
 						</div>
-						<div class="header__languages languages">
-							<span class="languages__item languages__item_active">ENG</span>
-							<span class="languages__item">POL</span>
+						<div class="header__languages">
+							<div class="languages">
+								<span class="lang-item current_page_item">ENG</span>
+								<span class="lang-item">POL</span>
+							</div>
+
 						</div>
 						<button type="button" class="header__burger icon-burger"><span class="icon-burger__lines"><span></span></span></button>
 
@@ -83,7 +86,7 @@
 								</div>
 								<div class="big-block__image-wrapper">
 									<div class="big-block__image big-block__image-ibg">
-										<picture><source srcset="img/blocks/projects/7.webp" type="image/webp"><img src="img/blocks/projects/7.jpg" alt=""></picture>
+										<picture><source srcset="img/blocks/projects/sity-battle/1.webp" type="image/webp"><img src="img/blocks/projects/sity-battle/1.jpg" alt=""></picture>
 									</div>
 								</div>
 								<div class="big-block__text text">
@@ -113,7 +116,7 @@
 								</div>
 								<div class="big-block__image-wrapper">
 									<div class="big-block__image big-block__image-ibg">
-										<picture><source srcset="img/blocks/projects/2.webp" type="image/webp"><img src="img/blocks/projects/2.jpg" alt=""></picture>
+										<picture><source srcset="img/blocks/projects/sity-battle/2.webp" type="image/webp"><img src="img/blocks/projects/sity-battle/2.jpg" alt=""></picture>
 									</div>
 								</div>
 							</div>
@@ -127,7 +130,7 @@
 				<div class="projects__container">
 					<div class="projects__blur"></div>
 					<div class="projects__wrapper-blur">
-						<h2 class="projects__title title title_mb">Our <span>PROJECTS</span></h2>
+						<h2 class="projects__title title title_mb">CITY <span>battle</span></h2>
 						<div class="projects__block block big-block block_grad block_big">
 							<h3 class="big-block__title">Transparency work</h3>
 
@@ -137,56 +140,108 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris a diam maecenas sed enim ut sem viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris a diam maecenas sed enim ut sem viverra.
 									</p>
 								</div>
-								<div class="projects__body">
+								<div class="projects__body" data-gallery>
 									<div class="projects__row projects__row_2">
 										<div class="projects__item">
 											<div class="item-projects item-projects_s">
-												<picture><source srcset="img/blocks/projects/1.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/1.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/2.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/2.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/2.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 										<div class="projects__item">
 											<div class="item-projects item-projects_m">
-												<picture><source srcset="img/blocks/projects/2.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/2.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/3.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/3.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/3.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 									</div>
 									<div class="projects__row projects__row_1">
 										<div class="projects__item">
 											<div class="item-projects item-projects_l">
-												<picture><source srcset="img/blocks/projects/7.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/7.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/1.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/1.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/1.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 									</div>
 									<div class="projects__row projects__row_4">
 										<div class="projects__item">
 											<div class="item-projects item-projects_s">
-												<picture><source srcset="img/blocks/projects/3.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/3.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/4.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/4.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/4.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 										<div class="projects__item">
 											<div class="item-projects item-projects_s">
-												<picture><source srcset="img/blocks/projects/4.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/4.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/5.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/5.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/5.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 										<div class="projects__item">
 											<div class="item-projects item-projects_s">
-												<picture><source srcset="img/blocks/projects/5.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/5.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/6.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/6.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/6.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 										<div class="projects__item">
 											<div class="item-projects item-projects_s">
-												<picture><source srcset="img/blocks/projects/6.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/6.jpg" alt=""></picture>
-												<div class="item-projects__title">Phantom Galaxies Game</div>
+												<a href="img/blocks/projects/sity-battle/7.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/7.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/7.jpg" alt=""></picture>
+												</a>
 											</div>
 										</div>
 									</div>
-
+									<div class="projects__row projects__row_4">
+										<div class="projects__item">
+											<div class="item-projects item-projects_s">
+												<a href="img/blocks/projects/sity-battle/8.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/8.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/8.jpg" alt=""></picture>
+												</a>
+											</div>
+										</div>
+										<div class="projects__item">
+											<div class="item-projects item-projects_s">
+												<a href="img/blocks/projects/sity-battle/9.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/9.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/9.jpg" alt=""></picture>
+												</a>
+											</div>
+										</div>
+										<div class="projects__item">
+											<div class="item-projects item-projects_s">
+												<a href="img/blocks/projects/sity-battle/10.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/10.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/10.jpg" alt=""></picture>
+												</a>
+											</div>
+										</div>
+										<div class="projects__item">
+											<div class="item-projects item-projects_s">
+												<a href="img/blocks/projects/sity-battle/11.jpg" class="item-projects__image" alt="">
+													<picture><source srcset="img/blocks/projects/sity-battle/11.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/11.jpg" alt=""></picture>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="projects__row projects__row_2" id="animated-thumbnails">
+										<div class="projects__item">
+											<div class="item-projects item-projects_m item-projects_video">
+												<div class="item-projects__image" data-lg-size="1280-720" data-video='{"source": [{"src":"img/blocks/projects/sity-battle/1.webm", "type":"video/webm"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}'>
+													<picture><source srcset="img/blocks/projects/sity-battle/2.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/2.jpg" alt=""></picture>
+												</div>
+											</div>
+										</div>
+										<div class="projects__item">
+											<div class="item-projects item-projects_m  item-projects_video">
+												<div class="item-projects__image" data-lg-size="1280-720" data-video='{"source": [{"src":"img/blocks/projects/sity-battle/2.webm", "type":"video/webm"}], "attributes": {"preload": false, "playsinline": true, "controls": true}}'>
+													<picture><source srcset="img/blocks/projects/sity-battle/3.webp" type="image/webp"><img class="item-projects__image-thumb" src="img/blocks/projects/sity-battle/3.jpg" alt=""></picture>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -424,7 +479,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20231026161014"></script>
+	<script src="js/app.min.js?_v=20231227155519"></script>
 </body>
 
 </html>

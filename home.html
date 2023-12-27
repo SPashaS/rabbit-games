@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231227155519">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,16 +32,19 @@
 						<div class="header__menu menu">
 							<nav class="menu__body">
 								<ul class="menu__list">
-									<li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-									<li class="menu__item"><a href="#" class="menu__link">Our projects</a></li>
-									<li class="menu__item"><a href="#" class="menu__link">Join us</a></li>
-									<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+									<li class="menu-item"><a href="#">About us</a></li>
+									<li class="menu-item"><a href="#">Our projects</a></li>
+									<li class="menu-item"><a href="#">Join us</a></li>
+									<li class="menu-item"><a href="#">Contacts</a></li>
 								</ul>
 							</nav>
 						</div>
-						<div class="header__languages languages">
-							<span class="languages__item languages__item_active">ENG</span>
-							<span class="languages__item">POL</span>
+						<div class="header__languages">
+							<div class="languages">
+								<span class="lang-item current_page_item">ENG</span>
+								<span class="lang-item">POL</span>
+							</div>
+
 						</div>
 						<button type="button" class="header__burger icon-burger"><span class="icon-burger__lines"><span></span></span></button>
 
@@ -277,50 +280,38 @@
 				<div class="projects__container">
 					<h2 class="projects__title title title_mb">Our <span>PROJECTS</span></h2>
 					<div class="projects__body">
-						<div class="projects__row projects__row_2">
+
+						<div class="projects__row projects__row_1">
 							<div class="projects__item">
-								<div class="item-projects item-projects_s">
+								<a href="/inside.html" class="item-projects item-projects_l">
 									<picture><source srcset="img/blocks/projects/1.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/1.jpg" alt=""></picture>
-									<img class="item-projects__image item-projects__image_gif" src="img/blocks/projects/1.gif" alt="">
-									<div class="item-projects__title">Phantom Galaxies Game</div>
-								</div>
-							</div>
-							<div class="projects__item">
-								<div class="item-projects item-projects_m">
-									<picture><source srcset="img/blocks/projects/2.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/2.jpg" alt=""></picture>
-									<img class="item-projects__image item-projects__image_gif" src="img/blocks/projects/1.gif" alt="">
-									<div class="item-projects__title">Phantom Galaxies Game</div>
-								</div>
+									<video muted loop class="item-projects__image item-projects__image_gif" src="img/blocks/projects/CityBattle.webm"></video>
+									<div class="item-projects__title">City Battle</div>
+								</a>
 							</div>
 						</div>
-						<div class="projects__row projects__row_4">
+
+						<div class="projects__row projects__row_3">
 							<div class="projects__item">
-								<div class="item-projects item-projects_s">
-									<picture><source srcset="img/blocks/projects/3.webp" type="image/webp"><img class="item-projects__image item-projects__image_img" src="img/blocks/projects/3.jpg" alt=""></picture>
-									<img class="item-projects__image item-projects__image_gif" src="img/blocks/projects/1.gif" alt="">
-									<div class="item-projects__title">Phantom Galaxies Game</div>
-								</div>
+								<a href="/inside.html" class="item-projects item-projects_s">
+									<picture><source srcset="img/blocks/projects/2.webp" type="image/webp"><img class="item-projects__image item-projects__image_img" src="img/blocks/projects/2.jpg" alt=""></picture>
+									<video muted loop class="item-projects__image item-projects__image_gif" src="img/blocks/projects/Phantom Gal.webm"></video>
+									<div class="item-projects__title">Phantom Galaxies</div>
+								</a>
 							</div>
 							<div class="projects__item">
-								<div class="item-projects item-projects_s">
+								<a href="/inside.html" class="item-projects item-projects_s">
+									<picture><source srcset="img/blocks/projects/3.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/3.jpg" alt=""></picture>
+									<video muted loop class="item-projects__image item-projects__image_gif" src="img/blocks/projects/Shadowman Dar.webm"></video>
+									<div class="item-projects__title">Shadowman Dark Legacy</div>
+								</a>
+							</div>
+							<div class="projects__item">
+								<a href="/inside.html" class="item-projects item-projects_s">
 									<picture><source srcset="img/blocks/projects/4.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/4.jpg" alt=""></picture>
-									<img class="item-projects__image item-projects__image_gif" src="img/blocks/projects/1.gif" alt="">
-									<div class="item-projects__title">Phantom Galaxies Game</div>
-								</div>
-							</div>
-							<div class="projects__item">
-								<div class="item-projects item-projects_s">
-									<picture><source srcset="img/blocks/projects/5.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/5.jpg" alt=""></picture>
-									<img class="item-projects__image item-projects__image_gif" src="img/blocks/projects/1.gif" alt="">
-									<div class="item-projects__title">Phantom Galaxies Game</div>
-								</div>
-							</div>
-							<div class="projects__item">
-								<div class="item-projects item-projects_s">
-									<picture><source srcset="img/blocks/projects/6.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/6.jpg" alt=""></picture>
-									<img class="item-projects__image item-projects__image_gif" src="img/blocks/projects/1.gif" alt="">
-									<div class="item-projects__title">Phantom Galaxies Game</div>
-								</div>
+									<video muted loop class="item-projects__image item-projects__image_gif" src="img/blocks/projects/War Robots Frontiers Trailer.webm"></video>
+									<div class="item-projects__title">War robots</div>
+								</a>
 							</div>
 						</div>
 
@@ -332,7 +323,7 @@
 			</section>
 
 			<div class="page__platforms platforms">
-				<div class="platforms__blur"></div>
+				<!-- <div class="platforms__blur"></div> -->
 				<div class="platforms__container">
 					<div class="platforms__body">
 						<span class="icon icon_xbox"></span>
@@ -462,7 +453,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20231026161014"></script>
+	<script src="js/app.min.js?_v=20231227155519"></script>
 </body>
 
 </html>
