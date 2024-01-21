@@ -6387,9 +6387,16 @@
           e.forEach((e) => {
             const t = e.target,
               i = t.querySelector("video");
-            !e.isIntersecting || e.intersectionRatio <= 0.9
-              ? (i.pause(), t.classList.remove("video-visible"))
-              : (i.play(), t.classList.add("video-visible"));
+            i.load(), (i.preload = null);
+            let s = i.play();
+            void 0 !== s &&
+              s
+                .then(() => {
+                  !e.isIntersecting || e.intersectionRatio <= 0.9
+                    ? (i.pause(), t.classList.remove("video-visible"))
+                    : (i.play(), t.classList.add("video-visible"));
+                })
+                .catch((e) => {});
           });
         },
         { threshold: [0.9, 1] },
