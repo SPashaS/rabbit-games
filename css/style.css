@@ -649,7 +649,8 @@ a[class*=_icon-]:active {
 .block__title {
   font-size: 1.6rem;
   font-weight: 500;
-  line-height: 32px; /* 160% */
+  line-height: 32px;
+  /* 160% */
   margin-bottom: 12px;
 }
 @media (min-width: 991.98px) {
@@ -844,9 +845,12 @@ a[class*=_icon-]:active {
 }
 
 select {
-  appearance: none; /* Убираем стандартный стиль браузера */
-  -webkit-appearance: none; /* Для Safari */
-  -moz-appearance: none; /* Для Firefox */
+  appearance: none;
+  /* Убираем стандартный стиль браузера */
+  -webkit-appearance: none;
+  /* Для Safari */
+  -moz-appearance: none;
+  /* Для Firefox */
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -855,7 +859,8 @@ select {
   color: #333;
   cursor: pointer;
   outline: none;
-  width: 100%; /* Занимает всю ширину родителя */
+  width: 100%;
+  /* Занимает всю ширину родителя */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -865,38 +870,45 @@ select:focus {
 }
 
 select::-ms-expand {
-  display: none; /* Скрываем стандартный значок для IE */
+  display: none;
+  /* Скрываем стандартный значок для IE */
 }
 
 /* Стили для стрелки (используем псевдоэлемент) */
-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23333%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%276 9 12 15 18 9%27/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 16px;
-}
-
-.custom-select-wrapper {
-  display: flex;
-  gap: 20px;
-}
-
-.custom-select {
+.vacancies__select-wrapper {
   position: relative;
-  cursor: pointer;
-  width: 200px;
+  width: 232px;
+}
+
+.vacancies__label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.67;
+  color: #39574a;
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  z-index: 1;
+  /* Поднимаем над линией */
+  padding: 0 5px;
+  background: #1d2829;
 }
 
 .custom-select-trigger {
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 8px 12px;
-  text-align: left;
-  font-size: 16px;
-  line-height: 20px;
   user-select: none;
-  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: 1px solid #39574a;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 20px;
+  color: #ffffff;
+  width: 100%;
+  cursor: pointer;
 }
 
 .custom-options {
@@ -905,21 +917,23 @@ select {
   top: 100%;
   left: 0;
   right: 0;
-  background: white;
-  border: 1px solid #ccc;
+  background: #2c2c2c;
+  border: 1px solid #64d8cb;
   border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 .custom-option {
   padding: 8px 12px;
+  color: #ffffff;
   cursor: pointer;
   transition: background 0.2s;
 }
 
 .custom-option:hover {
-  background: #f0f0f0;
+  background-color: #64d8cb;
 }
 
 .custom-select.open .custom-options {
@@ -2107,6 +2121,7 @@ select {
 .vacancies__filters {
   display: flex;
   gap: 12px;
+  padding-top: 12px;
 }
 @media (min-width: 991.98px) {
   .vacancies__tabs {

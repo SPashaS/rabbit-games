@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250125234454">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,19 +82,29 @@
 							<h2 class="vacancies__title title">Our <span>Vacancy</span></h2>
 							<div class="vacancies__filters">
 
-								<select id="locationFilter" class="vacancies__select">
-									<!-- <option value="All">All Locations</option>
-									<option value="Poland">Poland</option>
-									<option value="Germany">Germany</option>
-									<option value="Remote">Remote</option> -->
+								<div class="vacancies__select-wrapper">
+									<label for="locationFilter" class="vacancies__label">Location</label>
+									<div id="locationFilter" class="vacancies__select custom-select">
+										<div class="custom-select-trigger">All Locations</div>
+										<div class="custom-options"></div>
+									</div>
+								</div>
+
+								<div class="vacancies__select-wrapper">
+									<label for="typeFilter" class="vacancies__label">Type</label>
+									<div id="typeFilter" class="vacancies__select custom-select">
+										<div class="custom-select-trigger">All Types</div>
+										<div class="custom-options"></div>
+									</div>
+								</div>
+
+
+
+								<!-- <select id="locationFilter" class="vacancies__select">
 								</select>
 
 								<select id="typeFilter" class="vacancies__select">
-									<!-- <option value="All">All Types</option>
-									<option value="Remote">Remote</option>
-									<option value="Office">Office</option>
-									<option value="Hybrid">Hybrid</option> -->
-								</select>
+								</select> -->
 
 
 								<!-- <div class="custom-select" id="locationFilter">
@@ -352,7 +362,7 @@
 
 	</script>
 
-	<script src="js/app.min.js?_v=20250125192555"></script>
+	<script src="js/app.min.js?_v=20250125234454"></script>
 </body>
 
 </html>
