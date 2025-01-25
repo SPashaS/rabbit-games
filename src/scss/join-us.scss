@@ -1,0 +1,237 @@
+//====================================================================================================
+
+.page {
+
+  // .page__vacancies
+
+  &__vacancies {}
+
+  // .page__questions
+
+  &__questions {}
+}
+
+.vacancies {
+  background: #1d2829;
+  padding: 60px 0;
+
+  // .vacancies__container
+
+  &__container {}
+
+  // .vacancies__body
+
+  &__body {
+
+
+    @media (min-width:$tablet) {
+      background: linear-gradient(222deg, #1d2728 0%, #223e34 100%);
+      padding: 55px 35px 90px;
+      border: 1px solid #164f29;
+      border-radius: 20px;
+    }
+  }
+
+  // .vacancies__header
+  &__header {
+    margin-bottom: 45px;
+
+    @media (min-width:$tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  // .vacancies__title
+  &__title {}
+
+  // .vacancies__filters
+  &__filters {
+    display: flex;
+    gap: 12px;
+  }
+
+  // .vacancies__select
+  &__select {}
+
+  // .vacancies__content
+  &__content {}
+
+  // .vacancies__tabs
+  &__tabs {
+    @media (min-width:$tablet) {
+      display: grid;
+      grid-template-columns: 337px 1fr;
+      gap: 25px;
+    }
+  }
+
+  // .vacancies__wrapper
+  &__wrapper {
+    .spollers__item {
+      background: #39574a;
+      // border-radius: 8px 0 0 8px;
+      border-radius: 8px;
+      padding: 16px 20px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .spollers__title {
+      padding: 0;
+    }
+
+    /* Стили для скроллбара */
+    .spollers__body {
+      padding-right: 15px;
+      margin-top: 25px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    /* Кастомизация полосы прокрутки */
+    .spollers__body::-webkit-scrollbar {
+      width: 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      /* Ширина скроллбара */
+    }
+
+    /* Весь путь скроллбара (фон) */
+    .spollers__body::-webkit-scrollbar-track {
+      background: #1e2c2b;
+      /* Тёмный цвет пути */
+      border-radius: 4px;
+      /* Скругление углов */
+    }
+
+    /* Ползунок (сам скролл) */
+    .spollers__body::-webkit-scrollbar-thumb {
+      background: var(--main-color);
+      ;
+      /* Зелёный цвет ползунка */
+      border-radius: 4px;
+      /* Скругление углов ползунка */
+    }
+
+    /* Ползунок при наведении */
+    .spollers__body::-webkit-scrollbar-thumb:hover {
+      background: #1e7e34;
+      /* Более тёмный зелёный при наведении */
+    }
+
+  }
+
+  // .vacancies__spollers-wrapper
+  &__spollers-wrapper {
+    @media (min-width:$tablet) {
+
+      display: none;
+    }
+  }
+
+
+  // .vacancies__tabs-wrapper
+  &__tabs-wrapper {
+    display: none;
+
+    @media (min-width:$tablet) {
+      display: block;
+    }
+  }
+
+}
+
+.tabs {
+
+  // .tabs__navigation
+
+  &__navigation {}
+
+  // .tabs__title
+
+  &__title {}
+
+  // .tabs__content
+
+  &__content {}
+
+  // .tabs__body
+
+  &__body {}
+}
+
+//====================================================================================================
+
+
+.promo {
+
+  // .promo__button
+
+  &__button {}
+}
+
+.button {
+
+  // .button_opacity
+
+  &_opacity {}
+}
+
+.questions {
+
+  // .questions__container
+
+  &__container {}
+
+  // .questions__body
+
+  &__body {}
+
+  // .questions__title
+
+  &__title {}
+
+  // .questions__list
+
+  &__list {}
+}
+
+.spollers {
+
+  // .spollers__item
+
+  &__item {}
+
+  // .spollers__title
+
+  &__title {}
+
+  // .spollers__body
+
+  &__body {}
+}
+
+
+//====================================================================================================
+
+
+
+
+//====================================================================================================
+
+
+
+
+
+//====================================================================================================
+
+
+
+
+
+//====================================================================================================

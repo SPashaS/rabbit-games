@@ -39,14 +39,14 @@ flsFunctions.menuInit();
 Документация:
 Сниппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль работы с табами
 Документация:
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
@@ -60,7 +60,7 @@ flsFunctions.showMore();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль параллакса мышью
@@ -78,7 +78,7 @@ import * as flsForms from "./files/forms/forms.js";
 flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-flsForms.formSubmit(true);
+// flsForms.formSubmit(true);
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();
@@ -90,7 +90,7 @@ flsForms.formSubmit(true);
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+// import './libs/select.js';
 
 /* (В работе) Модуль работы с масками.*/
 /*
@@ -154,7 +154,7 @@ import "./files/sliders.js";
 // import './libs/watcher.js'
 
 // Функции работы скроллом
-import * as flsScroll from "./files/scroll/scroll.js";
+// import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // flsScroll.pageNavigation();
@@ -173,7 +173,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";
 
 // ========================================================================================================================================================================================================================================================
 // Прочие плагины ============================================================================================================================================================================================================================================================================================================

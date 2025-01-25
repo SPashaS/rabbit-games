@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250125192555">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@
 							</div>
 
 						</div>
-						<button type="button" class="header__burger icon-burger"><span class="icon-burger__lines"><span></span></span></button>
+						<button type="button" class="header__burger icon-burger" aria-label="menu"><span class="icon-burger__lines"><span></span></span></button>
 
 					</div>
 
@@ -285,8 +285,8 @@
 							<div class="projects__item">
 								<a href="/inside.html" class="item-projects item-projects_l">
 									<picture><source srcset="img/blocks/projects/1.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/1.jpg" alt=""></picture>
-									<video muted loop playsinline class="item-projects__image item-projects__image_video" src="img/video/video.mp4"></video>
-									<div class="item-projects__title">City Battle</div>
+									<video muted="true" loop="true" playsinline="true" class="item-projects__video" src="img/video/video.mp4"></video>
+									<div class="item-projects__title"><span>City Battle</span></div>
 								</a>
 							</div>
 						</div>
@@ -295,27 +295,28 @@
 							<div class="projects__item">
 								<a href="/inside.html" class="item-projects item-projects_s">
 									<picture><source srcset="img/blocks/projects/2.webp" type="image/webp"><img class="item-projects__image item-projects__image_img" src="img/blocks/projects/2.jpg" alt=""></picture>
-									<video muted loop playsinline class="item-projects__image item-projects__image_video" src="img/video/video.mp4"></video>
-									<div class="item-projects__title">Phantom Galaxies</div>
+									<video muted="true" loop="true" playsinline="true" class="item-projects__video" src="img/video/video.mp4"></video>
+									<div class="item-projects__title"><span>Phantom Galaxies</span></div>
 								</a>
 							</div>
 							<div class="projects__item">
 								<a href="/inside.html" class="item-projects item-projects_s">
 									<picture><source srcset="img/blocks/projects/3.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/3.jpg" alt=""></picture>
-									<video muted loop playsinline class="item-projects__image item-projects__image_video" src="img/video/video.mp4"></video>
-									<div class="item-projects__title">Shadowman Dark Legacy</div>
+									<video muted="true" loop="true" playsinline="true" class="item-projects__video" src="img/video/video.mp4"></video>
+									<div class="item-projects__title"><span>Shadowman Dark Legacy</span></div>
 								</a>
 							</div>
 							<div class="projects__item">
 								<a href="/inside.html" class="item-projects item-projects_s">
 									<picture><source srcset="img/blocks/projects/4.webp" type="image/webp"><img class="item-projects__image" src="img/blocks/projects/4.jpg" alt=""></picture>
-									<video muted loop playsinline class="item-projects__image item-projects__image_video" src="img/video/video.mp4"></video>
-									<div class="item-projects__title">War robots</div>
+									<video muted="true" loop="true" playsinline="true" class="item-projects__video" src="img/video/video.mp4"></video>
+									<div class="item-projects__title"><span>War robots</span></div>
 								</a>
 							</div>
 						</div>
 
 					</div>
+
 					<div class="projects__button">
 						<button class="button button_fw"><span>Show more</span></button>
 					</div>
@@ -370,7 +371,13 @@
 								</div>
 							</a>
 						</div>
-						<span class="footer__copy footer__copy_pc">All rights reserved 2023</span>
+						<div class="footer__copy footer__copy_pc">
+							<p>RGAMES WEST SP. Z O.O.</p>
+							<p>VIII Business Registration Section of National Court Register,</p>
+							<p>KRS 0000963502, Equity: 5.000 PLN,</p>
+							<p>VAT ID: PL5242937233</p>
+							<p>REGON: 521601213</p>
+						</div>
 					</div>
 					<div class="footer__main">
 						<div class="footer__nav nav-footer">
@@ -411,19 +418,19 @@
 								<span>Contact us</span>
 								<ul class="socials-list">
 									<li>
-										<a href="#" class="socials-list__icon _icon-tel"></a>
+										<a href="#" class="socials-list__icon _icon-tel" aria-label="humber"></a>
 									</li>
 									<li>
-										<a href="#" class="socials-list__icon _icon-telegram"></a>
+										<a href="#" class="socials-list__icon _icon-telegram" aria-label="telegram"></a>
 									</li>
 									<li>
-										<a href="#" class="socials-list__icon _icon-instagram"></a>
+										<a href="#" class="socials-list__icon _icon-instagram" aria-label="instagram"></a>
 									</li>
 									<li>
-										<a href="#" class="socials-list__icon _icon-email"></a>
+										<a href="#" class="socials-list__icon _icon-email" aria-label="email"></a>
 									</li>
 									<li>
-										<a href="#" class="socials-list__icon _icon-discord"></a>
+										<a href="#" class="socials-list__icon _icon-discord" aria-label="discord"></a>
 									</li>
 								</ul>
 							</div>
@@ -433,7 +440,13 @@
 
 					<div class="footer__bottom">
 						<a href="#" class="footer__button button button_fw"><span>Contact us</span></a>
-						<span class="footer__copy footer__copy_mob">All rights reserved 2023</span>
+						<div class="footer__copy footer__copy_mob">
+							<p>RGAMES WEST SP. Z O.O.</p>
+							<p>VIII Business Registration Section of National Court Register,</p>
+							<p>KRS 0000963502, Equity: 5.000 PLN,</p>
+							<p>VAT ID: PL5242937233</p>
+							<p>REGON: 521601213</p>
+						</div>
 					</div>
 				</div>
 
@@ -441,19 +454,43 @@
 		</footer>
 		<div class="parallax"></div>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="job" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">Close</button>
+				<div class="popup__body">
+					<div class="popup__title"></div>
+					<div class="popup__subtitle"></div>
+					<div class="popup__text"></div>
+					<form action="#" class="popup__form form">
+						<div class="form__input">
+							<input type="text" placeholder="First Name" data-required>
+						</div>
+						<div class="form__input">
+							<input type="text" placeholder="Last Name" data-required>
+						</div>
+						<div class="form__input">
+							<input type="email" placeholder="Email" data-required="email" data-error="Email doesn't exist">
+						</div>
+						<div class="form__input">
+							<input type="text" placeholder="Your message" data-required>
+						</div>
+						<div class="form__buttons">
+							<div class="form__button">
+								<button class="button button_fw"><span>Send</span></button>
+							</div>
+						</div>
+
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
+	<script>
 
-	<script src="js/app.min.js?_v=20240121204650"></script>
+	</script>
+
+	<script src="js/app.min.js?_v=20250125192555"></script>
 </body>
 
 </html>

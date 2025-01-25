@@ -33,19 +33,50 @@
   &__about {}
 
   // .page__projects
-  &__projects {}
+  &__projects {
+    @media (min-width:$tablet){
+      padding-top: 193px;
+  
+      position: relative;
+      &::after {
+        content:'';
+        position: absolute;
+        z-index: 1;
+        background-image: url("@img/decor/rectangle.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 
   // .page__platforms
-  &__platforms {}
+  &__platforms {
+    position: relative;
+    &::after {
+      content:'';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background: #171A1C;
+    }
+  }
 
   // .page__join
   &__join {
-    margin-top: 27px;
-    margin-bottom: 54px;
+    // margin-top: 27px;
+    // margin-bottom: 54px;
 
     @media (min-width:$tablet){
-      margin-top: 77px;
-      margin-bottom: 194px;
+      // margin-top: 77px;
+      // margin-bottom: 194px;
     }
 
   }
@@ -246,7 +277,7 @@
       padding-right: 12px;
 
       @media (min-width:$mobile){
-        padding-right: 0;
+        padding-right: 20px;
       }
 
       &::after {
@@ -394,7 +425,7 @@
 
   @media (min-width:$tablet){
     padding-top: 71px;
-    padding-bottom: 155px;
+    padding-bottom: 80px;
   }
 
 
@@ -416,31 +447,31 @@
 //====================================================================================================
 
 .projects {
-  padding-top: 27px;
-  padding-bottom: 27px;
+  // padding-top: 27px;
+  // padding-bottom: 27px;
 
-  &_home {
-    @media (min-width:$tablet){
-      padding-top: 193px;
-      padding-bottom: 221px;
+  // &_home {
+  //   @media (min-width:$tablet){
+  //     padding-top: 193px;
+  //     padding-bottom: 221px;
   
-      position: relative;
-      &::after {
-        content:'';
-        position: absolute;
-        z-index: 1;
-        // clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0 93%);
-        background-image: url("@img/decor/rectangle.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
+  //     position: relative;
+  //     &::after {
+  //       content:'';
+  //       position: absolute;
+  //       z-index: 1;
+  //       // clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0 93%);
+  //       background-image: url("@img/decor/rectangle.svg");
+  //       background-repeat: no-repeat;
+  //       background-size: 100% 100%;
+  //       background-position: center;
+  //       top: 0;
+  //       left: 0;
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //   }
+  // }
 
   // .projects__container
   &__container {
@@ -468,39 +499,49 @@
       gap: 20px;
     }
 
-    // .projects__row_4
-    &_4 {
-      @media (min-width:$mobile){
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-    // .projects__row_1
-    .projects__row_1 {
-      display: none;
 
+    // .projects__row_1
+    &_1 {
       @media (min-width:$mobile){
-        display: block;
+        .item-projects__title {
+          font-size: 2.4rem;
+          text-align: left;
+        }
       }
     }
 
     // .projects__row_2
     &_2 {
-      display: none;
+      // display: none;
 
       @media (min-width:$mobile){
         display: grid;
-        grid-template-columns: 400px 1fr;
+        grid-template-columns: 1fr 1fr;
 
         .item-projects__title {
-          font-size: 2.4rem;
+          font-size: 1.4rem;
           text-align: left;
         }
 
       }
     }
 
-    // .projects__row_big
-    &_big {}
+    // .projects__row_3
+    &_3 {
+      @media (min-width:$mobile){
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    // .projects__row_4
+    &_4 {
+      @media (min-width:$mobile){
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    // // .projects__row_big
+    // &_big {}
 
   }
 
@@ -528,35 +569,81 @@
 
   @media (hover: hover) {
     &:hover {
-      .item-projects__image_gif {
-        opacity: 1;
-      }
+      color: var(--main-color-text);
     }
+  }
+  &:active {
+    color: var(--main-color-text);
   }
 
   &_m {
     @media (min-width:$mobile){
-      padding-bottom: 52%;
+      padding-bottom: 48.3%;
     }
 
   }
 
   &_l {
     @media (min-width:$mobile){
-      padding-bottom: 38%;
+      padding-bottom: 34%;
     }
   }
 
   &_m,
   &_l {
     @media (min-width:$mobile){
-      padding-bottom: 38%;
+      // padding-bottom: 38%;
     }
   }
 
-  
+  &_video {
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      pointer-events: none;
+    }
+
+    &::before {
+      content:'';
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #223E34;
+      transition: all 0.3s ease 0s;
+
+    }
+
+    &::after {
+      @extend %ic;
+      content: "\e905";
+      font-size: 50px;
+      z-index: 3;
+      transform: translate(-40%, -50%);
+      transition: all 0.4s linear 0s;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          // background: #ffffff;
+          transform: translate(-50%, -50%) scale(2);
+        }
+        &:after {
+          font-size: 150px;
+        }
+      }
+    }
+  }
+
+
   // .item-projects__image
   &__image {
+    overflow: hidden;
     object-fit: cover;
     border-radius: 12px;
     position: absolute;
@@ -570,16 +657,35 @@
       z-index: 1;
     }
 
-    &_gif {
-      display: none;
-      
-      @media (min-width:$tablet){
-        display: block;
-        opacity: 0;
-        z-index: 2;
-      }
-
+    &-thumb {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s ease 0s;
     }
+  }
+
+  &__video {
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease 0s;
+    // display: none;
+    opacity: 0;
+    @media (min-width:$tablet){
+      display: block;
+      
+      z-index: 2;
+    }
+
   }
 
   // .item-projects__title
@@ -602,6 +708,28 @@
     @media (min-width:$mobile){
       font-size: 1.4rem;
     }
+    span {
+      position: relative;
+    }
+  }
+
+  &.item-projects_video-visible  {
+    .item-projects__video {
+      opacity: 1;
+    }
+    .item-projects__title {
+      color: #ffffff;
+    }
+    .item-projects__title span::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -10px;
+      bottom: 0;
+      left: -10px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
 }
 
@@ -609,13 +737,13 @@
 
 .platforms {
   position: relative;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 54px;
+  padding-bottom: 54px;
   background: #171A1C;
 
   @media (min-width:$tablet){
-    padding-top: 72px;
-    padding-bottom: 77px;
+    padding-top: 155px;
+    padding-bottom: 155px;
   }
 
   // .platforms__container
@@ -630,50 +758,43 @@
     flex-wrap: wrap;
     column-gap: 40px;
     row-gap: 29px;
+
+    @media (min-width:$tablet) {
+      .icon_xbox {
+        order: 8;
+      }
+      .icon_steam {
+        order: 7;
+      }
+      .icon_arcade {
+        order: 2;
+      }
+      .icon_steam-deck {
+        order: 4;
+      }
+      .icon_ios {
+        order: 5;
+      }
+      .icon_vr {
+        order: 10;
+      }
+      .icon_nintendo {
+        order: 1;
+      }
+      .icon_pc {
+        order: 3;
+      }
+      .icon_android {
+        order: 6;
+      }
+      .icon_ps {
+        order: 9;
+      } 
+    }
   }
 
   // .platforms__icon
   &__icon {}
-
-  .platforms {
-
-		// .platforms__body
-
-		&__body {
-      @media (min-width:$tablet) {
-        .icon_xbox {
-          order: 8;
-        }
-        .icon_steam {
-          order: 7;
-        }
-        .icon_arcade {
-          order: 2;
-        }
-        .icon_steam-deck {
-          order: 4;
-        }
-        .icon_ios {
-          order: 5;
-        }
-        .icon_vr {
-          order: 10;
-        }
-        .icon_nintendo {
-          order: 1;
-        }
-        .icon_pc {
-          order: 3;
-        }
-        .icon_android {
-          order: 6;
-        }
-        .icon_ps {
-          order: 9;
-        } 
-      }
-    }
-}
 
 }
 
@@ -695,6 +816,7 @@
     background: linear-gradient(120deg, #006369 -1.27%, rgba(0, 99, 105, 0.48) 52.84%, 
     rgba(0, 99, 105, 0.00) 130.58%), center / cover no-repeat  url("@img/blocks/join/bg-mob.jpg") , 
     #006369 -166.279px -93.587px / 197.933% 141.456% no-repeat;
+    background-size: cover;
   
     @media (min-width:$tablet){
       background: linear-gradient(90deg, #006369 -1.22%, rgba(0, 99, 105, 0.48) 48.58%,
